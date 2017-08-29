@@ -1,8 +1,8 @@
 //
 //  main.cpp
-//  Hello World
+//  Lab2 Beetle Mania
 //
-//  Created by Gaelin Shupe on 8/18/17.
+//  Created by Gaelin Shupe on 8/29/17.
 //  Copyright © 2017 Gaelin Shupe. All rights reserved.
 //
 
@@ -11,11 +11,5 @@
 int main(int argc, const char * argv[]) {
     // insert code here...
     std::cout << "Hello, World!\n";
-    int a =0;
-    int b = 0;
-    a = ++b;
-    std::cout << b << " " << a << "\n";
-    std::string cs;
-    std::cout << cs.length() << "\n";
     return 0;
 }
