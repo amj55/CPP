@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1504823959 source:c:\users\bhs-cs\cpp\lab3 math functions\main.cpp
+	<iostream>
+	<iomanip>
+	<windows.h>
+	<math.h>
+

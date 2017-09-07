@@ -23,6 +23,8 @@ int main() {
     int i, j;
     COORD coord;
     coord.X=0;
+    COORD coords[6];
+
     for (i=0, j=80; i<40; i++, j--) {
         SetConsoleTextAttribute(con, FOREGROUND_GREEN | FOREGROUND_INTENSITY);
         coord.X = i;
@@ -43,7 +45,7 @@ int main() {
             coord.X = j+2;
             SetConsoleCursorPosition(con, coord);
             printf("***");
-            Sleep(200);
+            Sleep(2000);
         }
 
         system("cls");

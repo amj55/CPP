@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1504730790 source:c:\users\bhs-cs\cpp\lab2 beetle mania\main.cpp
+	<windows.h>
+	<stdio.h>
+	<stdlib.h>
+
