@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1504906279 source:c:\users\bhs-cs\cpp\lab3 math functions\main.cpp
+1505341859 source:c:\users\bhs-cs\cpp\lab3 math functions\main.cpp
 	<iostream>
 	<iomanip>
 	<math.h>
