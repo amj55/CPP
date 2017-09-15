@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1505361293 source:c:\users\gaelin\cpp\usoclient\main.cpp
+	<iostream>
+	<fstream>
+	<ctime>
+
