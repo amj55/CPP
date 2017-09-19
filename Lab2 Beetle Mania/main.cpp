@@ -24,28 +24,50 @@ int main() {
     COORD coord;
     coord.X=0;
     COORD coords[6];
+    bool bug1=true, bug2=true;
 
-    for (i=0, j=80; i<40; i++, j--) {
-        SetConsoleTextAttribute(con, FOREGROUND_GREEN | FOREGROUND_INTENSITY);
-        coord.X = i;
-        coord.Y = 10;
-        SetConsoleCursorPosition(con, coord);
-        printf(ben[i%4]);
-        coord.Y = 11;
-        SetConsoleCursorPosition(con, coord);
-        printf(" -0000:");
-        coord.Y = 12;
-        SetConsoleCursorPosition(con, coord);
-        printf(ben[i%4]);
-
+    for (i=0, j=80; j>0; i++, j--) {
+        if (bug1) {
+            SetConsoleTextAttribute(con, 3 | FOREGROUND_INTENSITY);
+            coord.X = i;
+            coord.Y = 10;
+            SetConsoleCursorPosition(con, coord);
+            printf(ben[i%4]);
+            coord.Y = 11;
+            SetConsoleCursorPosition(con, coord);
+            printf(" -0000:");
+            coord.Y = 12;
+            SetConsoleCursorPosition(con, coord);
+            printf(ben[i%4]);
+        }
+        if (bug2) {
+            SetConsoleTextAttribute(con, FOREGROUND_BLUE | FOREGROUND_INTENSITY);
+            coord.X = j;
+            coord.Y = 9;
+            SetConsoleCursorPosition(con, coord);
+            printf(ben[i%4]);
+            coord.Y = 10;
+            SetConsoleCursorPosition(con, coord);
+            printf(" :0000-");
+            coord.Y = 11;
+            SetConsoleCursorPosition(con, coord);
+            printf(":00000-");
+            coord.Y = 12;
+            SetConsoleCursorPosition(con, coord);
+            printf(" :0000-");
+            coord.Y = 13;
+            SetConsoleCursorPosition(con, coord);
+            printf(ben[i%4]);
+        }
         Sleep(75);
-        if (i == 39) {
+        if (i==36 | i==37) {
             SetConsoleTextAttribute(con, FOREGROUND_RED | FOREGROUND_INTENSITY);
             coord.Y = 11;
-            coord.X = j+2;
+            coord.X = i;
             SetConsoleCursorPosition(con, coord);
             printf("***");
-            Sleep(2000);
+            Sleep(100);
+            bug1=false;
         }
 
         system("cls");
