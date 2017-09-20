@@ -30,7 +30,7 @@ int main(void) {
         for(r = 0; r < SCREEN_HEIGHT; r++) {
             for(c = 0; c < SCREEN_WIDTH; c++) {
                 if(r == 0) {
-                    if(true/*(rand() % 3 + 1) % 2 == 0*/) {
+                    if((rand() % 3 + 1) % 2 == 0) {
                         buffer[r][c].Char.AsciiChar = rand() % 74 + 48;
                         buffer[r][c].Attributes = rand() % 2 + 10;
                     }
