@@ -11,6 +11,7 @@
 #include <windows.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <iostream>
 
 #define SCREEN_WIDTH 125
 #define SCREEN_HEIGHT 30
@@ -35,35 +36,29 @@ int main(void) {
       buffer[i+5][2].Attributes = i;
     }*/ // 2, 3, 10, 11
     while(true) {
-        SetConsoleTextAttribute(hOutput, 2);
-        for(r = 0; r < SCREEN_HEIGHT; r++) {
+        for(r = SCREEN_HEIGHT - 1; r >= 0; r--) {
             for(c = 0; c < SCREEN_WIDTH; c++) {
                 if(r == 0) {
-                    if((rand() % 3 + 1) % 2 == 0) {
+                    if(buffer[r][c].Char.AsciiChar == 32) {
+                        if(rand() % 35 == 0) {
+                            buffer[r][c].Char.AsciiChar = rand() % 74 + 48;
+                            buffer[r][c].Attributes = rand() % 2 + 10;
+                        }
+                    } else {}
+                } else {
+                    buffer[r][c] = buffer[r - 1][c];
+                    if(!(buffer[r][c].Char.AsciiChar == 32))
                         buffer[r][c].Char.AsciiChar = rand() % 74 + 48;
-                        buffer[r][c].Attributes = rand() % 2 + 10;
-                    }
-                } else
-                    buffer[r][c] = buffer [r - 1][c];
                 }
-            WriteConsoleOutput(hOutput, (CHAR_INFO *)buffer, dwBufferSize, dwBufferCoord, &rcRegion);
-            Sleep(100);
-        }
-
-
-        for(r = 0; r < SCREEN_HEIGHT; r++) {
-            for(c = 0; c < SCREEN_WIDTH; c++) {
-                buffer[r][c].Char.AsciiChar = ' ';
             }
         }
+        WriteConsoleOutput(hOutput, (CHAR_INFO *)buffer, dwBufferSize, dwBufferCoord, &rcRegion);
+        Sleep(75);
+
+
+        /*for(r = 0; r < SCREEN_HEIGHT; r++)
+            for(c = 0; c < SCREEN_WIDTH; c++)
+                buffer[r][c].Char.AsciiChar = 32;*/
     }
     return 0;
 }
-
-
-
-
-
-
-
-
