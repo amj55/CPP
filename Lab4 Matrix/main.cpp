@@ -38,12 +38,9 @@ int main(void) {
       buffer[i+5][5].Char.AsciiChar = i%10 +48;
       buffer[i+5][2].Attributes = i;
     }*/ // 2, 3, 10, 11   33-126   -128 -1
-    /*for(char c = 1; c != 0; c++) {
-            std::cout << (int)c << "  " << c << std::endl;
-    }
-    std::cout << "Done" << std::endl;
-    Sleep(1000000);*/
     int rate = 0;
+    std::string text = "The Matrix";
+    CHAR_INFO tempBuffer[text.length()];
     while(true) {
         for(r = SCREEN_HEIGHT - 1; r >= 0; r--) {
             for(c = 0; c < SCREEN_WIDTH; c++) {
@@ -73,13 +70,27 @@ int main(void) {
                         }
                     }
                 }
-                if(!(buffer[r][c].Char.AsciiChar == 32))
+                if(!(buffer[r][c].Char.AsciiChar == 32)) {
+                    //if(r == SCREEN_HEIGHT / 2 && (SCREEN_WIDTH - 5 < c && c < SCREEN_WIDTH + 4)) {
+
+                    //} else
                     buffer[r][c].Char.AsciiChar = rand() % 256;
+                }
             }
         }
         if(rate < 240) rate++;
-        if(rate < 100) rate++;
+        if(rate < 100) rate+=200;
+        if(rate == 240)
+            for(int i = 0; i < text.length(); i++) {
+                tempBuffer[i] = buffer[SCREEN_HEIGHT / 2][SCREEN_WIDTH / 2 - (text.length() / 2) + i];
+                buffer[SCREEN_HEIGHT / 2][SCREEN_WIDTH / 2 - (text.length() / 2) + i].Char.AsciiChar = text[i];
+                buffer[SCREEN_HEIGHT / 2][SCREEN_WIDTH / 2 - (text.length() / 2) + i].Attributes = 10;
+            }
         WriteConsoleOutput(hOutput, (CHAR_INFO *)buffer, dwBufferSize, dwBufferCoord, &rcRegion);
+        if(rate == 240)
+            for(int i = 0; i < text.length(); i++) {
+                buffer[SCREEN_HEIGHT / 2][SCREEN_WIDTH / 2 - (text.length() / 2) + i] = tempBuffer[i];
+            }
         Sleep(250 - rate);
 
 
