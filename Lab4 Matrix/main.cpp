@@ -42,8 +42,8 @@ int main(void) {
     WriteConsoleOutput(hOutput, (CHAR_INFO *)buffer, dwBufferSize, dwBufferCoord, &rcRegion);
     Sleep(10000);*/
     ReadConsoleOutput(hOutput, (CHAR_INFO *)buffer, dwBufferSize, dwBufferCoord, &rcRegion);
-    int rate = 0;
-    std::string text = "The Matrix";
+    int rate = 175;
+    std::string text = "The matrix";
     CHAR_INFO tempBuffer[text.length()];
     while(true) {
         for(r = SCREEN_HEIGHT - 1; r >= 0; r--) {
