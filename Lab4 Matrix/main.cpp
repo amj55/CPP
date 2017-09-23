@@ -33,15 +33,6 @@ int main(void) {
     SMALL_RECT rcRegion = { 0, 0, SCREEN_WIDTH, SCREEN_HEIGHT };
 
     CHAR_INFO buffer[SCREEN_HEIGHT][SCREEN_WIDTH];
-
-    /*for (int i=0; i<16; i++) {
-      buffer[i+5][2].Char.AsciiChar = 'A';
-      buffer[i+5][4].Char.AsciiChar = i/10 +48;
-      buffer[i+5][5].Char.AsciiChar = i%10 +48;
-      buffer[i+5][2].Attributes = i;
-    } // 2, 3, 10, 11   33-126   -128 -1
-    WriteConsoleOutput(hOutput, (CHAR_INFO *)buffer, dwBufferSize, dwBufferCoord, &rcRegion);
-    Sleep(10000);*/
     ReadConsoleOutput(hOutput, (CHAR_INFO *)buffer, dwBufferSize, dwBufferCoord, &rcRegion);
     int rate = 175;
     std::string message = "The matrix";

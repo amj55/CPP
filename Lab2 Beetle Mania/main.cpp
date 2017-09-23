@@ -22,52 +22,56 @@ int main() {
     HANDLE con = GetStdHandle(STD_OUTPUT_HANDLE);
     int i, j;
     COORD coord;
-    coord.X=0;
-    COORD coords[6];
-    bool bug1=true, bug2=true;
+    bool bug1 = true, bug2 = true;
+    int bug1Color = 11, bug2Color = 9, bug2Grow = 10, colideColor = 12;
 
-    for (i=0, j=80; j>0; i++, j--) {
-        if (bug1) {
-            SetConsoleTextAttribute(con, 3 | FOREGROUND_INTENSITY);
-            coord.X = i;
-            coord.Y = 10;
+    for(i = 0, j = 80; j > 0; i++, j--) {
+        if(bug1) {
+            SetConsoleTextAttribute(con, bug1Color);
+            coord = {i, 10};
             SetConsoleCursorPosition(con, coord);
-            printf(ben[i%4]);
+            printf(ben[i % 4]);
             coord.Y = 11;
             SetConsoleCursorPosition(con, coord);
             printf(" -0000:");
             coord.Y = 12;
             SetConsoleCursorPosition(con, coord);
-            printf(ben[i%4]);
+            printf(ben[i % 4]);
         }
-        if (bug2) {
-            SetConsoleTextAttribute(con, FOREGROUND_BLUE | FOREGROUND_INTENSITY);
+        if(bug2) {
+            SetConsoleTextAttribute(con, bug2Color);
             coord.X = j;
-            coord.Y = 9;
-            SetConsoleCursorPosition(con, coord);
-            printf(ben[i%4]);
+            if(i ==  37) SetConsoleTextAttribute(con, bug2Grow);
+            if(!bug1) {
+                coord.Y = 9;
+                SetConsoleCursorPosition(con, coord);
+                printf(ben[i % 4]);
+            }
             coord.Y = 10;
             SetConsoleCursorPosition(con, coord);
-            printf(" :0000-");
+            printf((bug1) ? ben[i % 4] : " :0000-");
             coord.Y = 11;
             SetConsoleCursorPosition(con, coord);
+            if(i ==  37) SetConsoleTextAttribute(con, bug2Color);
             printf(":00000-");
             coord.Y = 12;
             SetConsoleCursorPosition(con, coord);
-            printf(" :0000-");
-            coord.Y = 13;
-            SetConsoleCursorPosition(con, coord);
-            printf(ben[i%4]);
+            if(i ==  37) SetConsoleTextAttribute(con, bug2Grow);
+            printf((bug1) ? ben[i % 4] : " :0000-");
+            if(!bug1) {
+                coord.Y = 13;
+                SetConsoleCursorPosition(con, coord);
+                printf(ben[i % 4]);
+            }
         }
         Sleep(75);
-        if (i==36 | i==37) {
-            SetConsoleTextAttribute(con, FOREGROUND_RED | FOREGROUND_INTENSITY);
-            coord.Y = 11;
-            coord.X = i;
+        if(i == 36 | i == 37) {
+            SetConsoleTextAttribute(con, colideColor);
+            coord = {i, 11};
             SetConsoleCursorPosition(con, coord);
             printf("***");
             Sleep(100);
-            bug1=false;
+            bug1 = false;
         }
 
         system("cls");
