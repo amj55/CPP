@@ -4,8 +4,9 @@
 using namespace std;
 
 int main() {
+    Sleep(1000);
     HANDLE console = GetStdHandle(STD_OUTPUT_HANDLE);
-    for(int y = -1; y < 16; y++) {
+    for(int y = -1; y < 16; y++) { // Prints the colors
         for(int x = -1; x < 16; x++) {
             SetConsoleCursorPosition(console, {(x + 1) * 4, y + 1});
             SetConsoleTextAttribute(console, 15);
@@ -22,7 +23,9 @@ int main() {
         SetConsoleCursorPosition(console, {68, y + 1});
         SetConsoleTextAttribute(console, 15);
         cout << (char)186 << endl;
-    }
+    } // End colors
+    //*
+    // Prints the ascii characters
     for(int y = -1; y < 16; y++) {
         for(int x = -1; x < 16; x++) {
             int c = y * 16 + x;
@@ -47,14 +50,16 @@ int main() {
         }
         SetConsoleCursorPosition(console, {68, y + 19});
         cout << (char)186 << endl;
-    }
+    } // End ascii
+    // Prints raw ascii
     SetConsoleTextAttribute(console, 143);
-    SetConsoleCursorPosition(console, {0, 40});
+    SetConsoleCursorPosition(console, {0, 36});
     for(int y = 0; y < 16; y++) {
         for(int x = 0; x < 16; x++)
             cout << (char)(y * 16 + x);
         cout << endl;
-    }
+    } // End raw ascii
+    //*/
     SetConsoleTextAttribute(console, 15);
     cout << endl << "Done" << endl;
 }
