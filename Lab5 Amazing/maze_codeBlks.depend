@@ -1,0 +1,30 @@
+# depslib dependency file v1.0
+1316107240 source:c:\documents and settings\tony.jiron\my documents\codeblocks\maze_codeblks\main.cpp
+	"maze.h"
+	<conio.h>
+
+1316108651 c:\documents and settings\tony.jiron\my documents\codeblocks\maze_codeblks\maze.h
+	<windows.h>
+	<iostream>
+	<fstream>
+
+1316106990 source:c:\documents and settings\tony.jiron\my documents\codeblocks\maze_codeblks\maze.cpp
+	"maze.h"
+
+1316107519 source:c:\documents and settings\tony.jiron\my documents\codeblocks\maze_codeblks\maze.h
+	<windows.h>
+	<iostream>
+	<fstream>
+
+1506374113 source:c:\users\gaelin\cpp\lab5 amazing\main.cpp
+	"maze.h"
+	<conio.h>
+
+1506545339 c:\users\gaelin\cpp\lab5 amazing\maze.h
+	<windows.h>
+	<iostream>
+	<fstream>
+
+1506545747 source:c:\users\gaelin\cpp\lab5 amazing\maze.cpp
+	"maze.h"
+
