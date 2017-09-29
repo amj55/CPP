@@ -1,4 +1,5 @@
 #include "maze.h"
+#include <vector>
 
 // Here will make a global (global to this .cpp file) instance of
 // our GAEMDATA
@@ -171,15 +172,37 @@ bool LoadMap() {
         } // End for
         y++; // Increment y
     }
-     // While
-     gamedata.width = SCREEN_WIDTH;
-     gamedata.height = SCREEN_HEIGHT;
+    // While
+    gamedata.width = SCREEN_WIDTH;
+    gamedata.height = SCREEN_HEIGHT;
     // Okay if we get here the map has been loaded successfully --
     // Now all we have to do is close the file we opened and then return true
     file_in.close();
     return true; // Success :)
 
 } // end of bool LoadMap()
+
+bool genMap() {
+    int r = 1, c = 1;
+    bool complete = false;
+    while(!complete) {
+        vector<int> open;
+        if(gamedata.screenBuff[r - 2][c].Char.AsciiChar == '#' | (r - 2) < 1) open.push(1);
+        if(gamedata.screenBuff[r + 2][c].Char.AsciiChar == '#' | (r + 1) > SCREEN_HEIGHT) ? 1 : 0;
+        if(gamedata.screenBuff[r][c - 2].Char.AsciiChar == '#' | (c - 2 < 1) ? 1 : 0;
+        if(gamedata.screenBuff[r][c + 2].Char.AsciiChar == '#' | (c + 1) > SCREEN_WIDTH) ? 1 : 0;
+        string a;
+
+    }
+
+              /*
+              for(int r = 0; r < SCREEN_HEIGHT; r++) {
+                  for(int c = 0; c < SCREEN_WIDTH; c++) {
+
+                  }
+              }*/
+              return 0;
+}
 
 // Returns true if the "entity" CAN NOT move in the direction specified by "dir"
 // otherwise returns false ("entity" can move in direction "dir")
