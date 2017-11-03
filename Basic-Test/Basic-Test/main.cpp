@@ -8,16 +8,15 @@
 
 #include <iostream>
 #include <string>
+#include <vector>
 
 using namespace std;
 
-const int SECRET = 11;
-const double RATE = 12.5;
-
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    cout << "Hello, World!\n";
-    //cin >> var1;
-    //cout << "Var1:" << var1
-    return 0;
+    vector<int> v1;
+    vector<int> v2;
+    v1.push_back(1);
+    v2.push_back(2);
+    cout << v1[0] << endl;
+    cout << v2[0] << endl;
 }
