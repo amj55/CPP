@@ -1,4 +1,3 @@
-
 //
 //  main.cpp
 //  Lab8  Print Check
@@ -6,8 +5,6 @@
 //  Created by Gaelin Shupe on 11/1/17.
 //  Copyright © 2017 Gaelin Shupe. All rights reserved.
 //
-
-// Chapter 7: Programming Exercise 1
 
 #include <iostream>
 
@@ -21,6 +18,7 @@ void funcOne(int &x, int y);
 void nextChar(char &z);
 
 int main() {
+  cout << "Lab8a:" << endl;
   int x, y;
   char z;
   double rate, hours;
@@ -28,7 +26,8 @@ int main() {
 
   initialize(x, y, z);
 
-  cout << "After initialization: x = " << x << ", y = " << y << ", z = " << z << endl;
+  cout << "After initialization: x = " << x << ", y = " << y << ", z = " << z
+       << endl;
 
   getHoursRate(hours, rate);
   pay = payCheck(hours, rate);
@@ -44,6 +43,18 @@ int main() {
   cout << "z = " << z << endl;
   nextChar(z);
   cout << "After nextChar: z = " << z << endl;
+
+  cout << endl << "Lab8b:" << endl;
+  
+  char chars[80];
+  cout << "Enter a string to convert to uppercase:" << endl;
+  cin.clear();
+  cin.get(chars, 80);
+  cout << "Upper: `";
+  for (int c = 0; c < 80; c++) cout << toupper(chars[c]);
+  cout << "`" << endl << "Flipped: `";
+  for (int c = 79; c >= 0; c--) cout << chars[c];
+  cout << "`" << endl;
 
   return 0;
 }
@@ -70,20 +81,16 @@ double payCheck(double hours, double rate) {
 }
 
 void printCheck(double hours, double rate, double pay) {
-  cout << "Hours: " << hours << " Rate: " << rate << " Amount due:" << pay << endl;
+  cout << "Hours: " << hours << " Rate: " << rate << " Amount due:" << pay
+       << endl;
 }
 
 void funcOne(int &x, int y) {
   int number = 0;
   cout << "Input a number:";
   cin >> number;
-  x = 2*x+y-number;
-  
+  x = 2 * x + y - number;
 }
 
-void nextChar(char &z) {
-  cout << "What the fuck am I supposed to do???" << endl << "z is a char... I cant change it to the next character stored in it..." << endl;
-  z = (int)z + 1;
-}
-
+void nextChar(char &z) { z = (int)z + 1; }
 
