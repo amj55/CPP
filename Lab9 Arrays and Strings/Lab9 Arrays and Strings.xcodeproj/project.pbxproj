@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F820533E1FBA3AE500F13134 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F820533D1FBA3AE500F13134 /* main.cpp */; };
+		F8A1AF471FBA4104007015CC /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F8A1AF461FBA4104007015CC /* main.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		F82053381FBA3AE500F13134 /* CopyFiles */ = {
+		F8A1AF411FBA4104007015CC /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -23,12 +23,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		F820533A1FBA3AE500F13134 /* Lab8 Print Check using Functions */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Lab8 Print Check using Functions"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F820533D1FBA3AE500F13134 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		F8A1AF431FBA4104007015CC /* Lab9 Arrays and Strings */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Lab9 Arrays and Strings"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8A1AF461FBA4104007015CC /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		F82053371FBA3AE500F13134 /* Frameworks */ = {
+		F8A1AF401FBA4104007015CC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -38,95 +38,95 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		F82053311FBA3AE500F13134 = {
+		F8A1AF3A1FBA4104007015CC = {
 			isa = PBXGroup;
 			children = (
-				F820533C1FBA3AE500F13134 /* Lab8 Print Check using Functions */,
-				F820533B1FBA3AE500F13134 /* Products */,
+				F8A1AF451FBA4104007015CC /* Lab9 Arrays and Strings */,
+				F8A1AF441FBA4104007015CC /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		F820533B1FBA3AE500F13134 /* Products */ = {
+		F8A1AF441FBA4104007015CC /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F820533A1FBA3AE500F13134 /* Lab8 Print Check using Functions */,
+				F8A1AF431FBA4104007015CC /* Lab9 Arrays and Strings */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		F820533C1FBA3AE500F13134 /* Lab8 Print Check using Functions */ = {
+		F8A1AF451FBA4104007015CC /* Lab9 Arrays and Strings */ = {
 			isa = PBXGroup;
 			children = (
-				F820533D1FBA3AE500F13134 /* main.cpp */,
+				F8A1AF461FBA4104007015CC /* main.cpp */,
 			);
-			path = "Lab8 Print Check using Functions";
+			path = "Lab9 Arrays and Strings";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F82053391FBA3AE500F13134 /* Lab8 Print Check using Functions */ = {
+		F8A1AF421FBA4104007015CC /* Lab9 Arrays and Strings */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F82053411FBA3AE500F13134 /* Build configuration list for PBXNativeTarget "Lab8 Print Check using Functions" */;
+			buildConfigurationList = F8A1AF4A1FBA4104007015CC /* Build configuration list for PBXNativeTarget "Lab9 Arrays and Strings" */;
 			buildPhases = (
-				F82053361FBA3AE500F13134 /* Sources */,
-				F82053371FBA3AE500F13134 /* Frameworks */,
-				F82053381FBA3AE500F13134 /* CopyFiles */,
+				F8A1AF3F1FBA4104007015CC /* Sources */,
+				F8A1AF401FBA4104007015CC /* Frameworks */,
+				F8A1AF411FBA4104007015CC /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "Lab8 Print Check using Functions";
-			productName = "Lab8 Print Check using Functions";
-			productReference = F820533A1FBA3AE500F13134 /* Lab8 Print Check using Functions */;
+			name = "Lab9 Arrays and Strings";
+			productName = "Lab9 Arrays and Strings";
+			productReference = F8A1AF431FBA4104007015CC /* Lab9 Arrays and Strings */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		F82053321FBA3AE500F13134 /* Project object */ = {
+		F8A1AF3B1FBA4104007015CC /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "Gaelin Shupe";
 				TargetAttributes = {
-					F82053391FBA3AE500F13134 = {
+					F8A1AF421FBA4104007015CC = {
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
 					};
 				};
 			};
-			buildConfigurationList = F82053351FBA3AE500F13134 /* Build configuration list for PBXProject "Lab8 Print Check using Functions" */;
+			buildConfigurationList = F8A1AF3E1FBA4104007015CC /* Build configuration list for PBXProject "Lab9 Arrays and Strings" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = F82053311FBA3AE500F13134;
-			productRefGroup = F820533B1FBA3AE500F13134 /* Products */;
+			mainGroup = F8A1AF3A1FBA4104007015CC;
+			productRefGroup = F8A1AF441FBA4104007015CC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F82053391FBA3AE500F13134 /* Lab8 Print Check using Functions */,
+				F8A1AF421FBA4104007015CC /* Lab9 Arrays and Strings */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		F82053361FBA3AE500F13134 /* Sources */ = {
+		F8A1AF3F1FBA4104007015CC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F820533E1FBA3AE500F13134 /* main.cpp in Sources */,
+				F8A1AF471FBA4104007015CC /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		F820533F1FBA3AE500F13134 /* Debug */ = {
+		F8A1AF481FBA4104007015CC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -181,7 +181,7 @@
 			};
 			name = Debug;
 		};
-		F82053401FBA3AE500F13134 /* Release */ = {
+		F8A1AF491FBA4104007015CC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -229,7 +229,7 @@
 			};
 			name = Release;
 		};
-		F82053421FBA3AE500F13134 /* Debug */ = {
+		F8A1AF4B1FBA4104007015CC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -237,7 +237,7 @@
 			};
 			name = Debug;
 		};
-		F82053431FBA3AE500F13134 /* Release */ = {
+		F8A1AF4C1FBA4104007015CC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -248,25 +248,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F82053351FBA3AE500F13134 /* Build configuration list for PBXProject "Lab8 Print Check using Functions" */ = {
+		F8A1AF3E1FBA4104007015CC /* Build configuration list for PBXProject "Lab9 Arrays and Strings" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F820533F1FBA3AE500F13134 /* Debug */,
-				F82053401FBA3AE500F13134 /* Release */,
+				F8A1AF481FBA4104007015CC /* Debug */,
+				F8A1AF491FBA4104007015CC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F82053411FBA3AE500F13134 /* Build configuration list for PBXNativeTarget "Lab8 Print Check using Functions" */ = {
+		F8A1AF4A1FBA4104007015CC /* Build configuration list for PBXNativeTarget "Lab9 Arrays and Strings" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F82053421FBA3AE500F13134 /* Debug */,
-				F82053431FBA3AE500F13134 /* Release */,
+				F8A1AF4B1FBA4104007015CC /* Debug */,
+				F8A1AF4C1FBA4104007015CC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = F82053321FBA3AE500F13134 /* Project object */;
+	rootObject = F8A1AF3B1FBA4104007015CC /* Project object */;
 }

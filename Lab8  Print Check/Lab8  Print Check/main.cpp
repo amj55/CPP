@@ -28,8 +28,7 @@ int main() {
 
   initialize(x, y, z);
 
-  cout << "After initialization: x = " << x << ", y = " << y << ", z = " << z
-       << endl;
+  cout << "After initialization: x = " << x << ", y = " << y << ", z = " << z << endl;
 
   getHoursRate(hours, rate);
   pay = payCheck(hours, rate);
@@ -71,12 +70,20 @@ double payCheck(double hours, double rate) {
 }
 
 void printCheck(double hours, double rate, double pay) {
+  cout << "Hours: " << hours << " Rate: " << rate << " Amount due:" << pay << endl;
+}
+
+void funcOne(int &x, int y) {
+  int number = 0;
+  cout << "Input a number:";
+  cin >> number;
+  x = 2*x+y-number;
   
 }
 
-void funcOne(int &x, int y) {}
-
-void nextChar(char &z) {}
-
+void nextChar(char &z) {
+  cout << "What the fuck am I supposed to do???" << endl << "z is a char... I cant change it to the next character stored in it..." << endl;
+  z = (int)z + 1;
 }
+
 
