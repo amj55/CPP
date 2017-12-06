@@ -12,11 +12,9 @@ xcuserdata/
 build/
 DerivedData/
 
-
 ## CodeBlocks
 bin/
 obj/
-*.cbp
 *.layout
 *.depend
 
