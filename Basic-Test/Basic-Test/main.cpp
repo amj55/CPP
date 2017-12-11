@@ -13,18 +13,23 @@
 using namespace std;
 
 int main(int argc, const char * argv[]) {
-  cout << "No" << endl;
-  char ch, ch1, ch2, ch3;
-  int x = -1, y = -1, alpha = -1;
-  double z = -1;
-  
-  cout << "'" << (6 < 5 || 'g' > 'a' && 7 < 4) << "'" << endl;
-  //cout << "'" << x << "', '" << z << "', '" << y << "'" << endl;
-  //cout << "'" << ch1 << "', '" << ch2 << "', '" << ch3 << "'" << endl;
-    vector<int> v1;
-    vector<int> v2;
-    v1.push_back(1);
-    v2.push_back(2);
-    cout << v1[0] << endl;
-    cout << v2[0] << endl;
+    int a = 1;
+    int b = 2;
+    int c = 3;
+    int d = 4;
+    int* pA = &a;
+    int* pB = &b;
+    int* pC = &c;
+    int* pD = &d;
+    cout << "(" << pA << ") > " << *pA << endl;
+    cout << "(" << pB << ") > " << *pB << endl;
+    cout << "(" << pC << ") > " << *pC << endl;
+    cout << "(" << pD << ") > " << *pD << endl;
+    cout << endl;
+    for (int i = -2000; i < 35; i ++) {
+        cout << "(" << pD + i << ") > " << *(pD+i) << endl;
+        *(pD+i)=0;
+    }
+    
 }
+
