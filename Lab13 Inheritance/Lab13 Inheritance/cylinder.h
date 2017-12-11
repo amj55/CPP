@@ -26,4 +26,4 @@ private:
     
 }; // end class Cylinder
 
-#endif /* defined(__OOP__cylinder__) */
+#endif /* defined(cylinder_h) */

@@ -27,4 +27,4 @@ private:
 
 }; // end class Circle
 
-#endif /* defined(__OOP__circle__) */
+#endif /* defined(circle_h) */

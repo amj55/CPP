@@ -22,5 +22,5 @@ private:
     
 }; // end class Point
 
-#endif /* defined(__OOP__point__) */
+#endif /* defined(point_h) */
 
